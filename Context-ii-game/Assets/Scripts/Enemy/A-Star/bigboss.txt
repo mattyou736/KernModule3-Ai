@@ -1,0 +1,18 @@
+tree("Root")
+	race
+		while 
+			sequence
+				not stunned
+				not playerIsTarget
+			sequence
+				SetTarget
+				StartMoving
+				Wait 10.0
+				nextPoint
+				Wait 8.0
+		while stunned
+			sequence
+				StunnedTask
+		while playerIsTarget
+			sequence
+				Alert
